@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WebGIS of Indonesia’s Maritime Boundary</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon_kiri_bawah.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-4 text-center text-lg-start">
+                <a href="index.html">
+                    <h1 class="display-6 text-primary m-0">Map Dashboard</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <h4 class="d-lg-none m-0">Menu</h4>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Map Dashboard</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="studycase.html" class="nav-item nav-link">Study Case</a>
+                        <div class="nav-item dropdown">
+                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="why.html" class="dropdown-item">Why</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                            </div>
+                        </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-3 text-uppercase mb-3">Indonesia's Maritime Boundaries</h1>
+                            <p class="fs-5 mb-5">Discover how Indonesia manages its Territorial Sea, Exclusive Economic Zone, and Continental Shelf. Use our interactive WebGIS to visualize and understand the nation’s maritime borders.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https://substack-post-media.s3.amazonaws.com/public/images/21c84636-5dd7-4361-8dbd-e6d598b4b8d4_1280x720.gif" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-3 text-uppercase mb-3">Indonesia as an Archipelagic State</h1>
+                            <p class="fs-5 mb-5">With more than 17,000 islands, Indonesia is the world’s largest archipelagic state. The 1957 Djuanda Declaration marked the beginning of Wawasan Nusantara, later recognized globally through UNCLOS 1982.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="https://media.giphy.com/media/3og0IPooGNUCe2fEFa/giphy.gif" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Video Start -->
+    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-11">
+                    <div class="h-100 py-5 d-flex align-items-center">
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/znRyJvYERtw" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h3 class="ms-5 mb-0">What are Maritime Zones? Here's a simple explanation!
+                        </h3>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-1">
+                    <div class="h-100 w-100 bg-secondary d-flex align-items-center justify-content-center">
+                        <span class="text-white" style="transform: rotate(-90deg);">Let's watch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+                <div class="map">
+                    <p class="section-title bg-white text-start text-primary pe-3">Map Dashboard</p>
+                    <h1 style="text-align: center;">Dashboard of Indonesia’s Maritime Boundary Map</h1>
+                    <iframe style="
+                        width: 100%;
+                        height: 500px;
+                        display:block;
+                        margin:0 auto;
+                        border: 0;"  
+                        src="map-dashboard.html">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-title">
+                        <h1 class="display-6 mb-4">Key Facts About Indonesia’s Maritime Boundaries</h1>
+                        <p class="fs-5 mb-0">Understanding Indonesia’s ocean sovereignty through law, history, and geography.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 col-xl-9">
+                    <div class="row g-5">
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-droplet fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Territorial Sea</h3>
+                                <p class="mb-2">Indonesia’s territorial sea extends 12 nautical miles from its baselines, granting full sovereignty similar to land territory.</p>
+                                <a href="https://www.un.org/depts/los/convention_agreements/texts/unclos/unclos_e.pdf?utm_source=chatgpt.com">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-hospital fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Exclusive Economic Zone (EEZ)</h3>
+                                <p class="mb-2">The EEZ covers 200 nautical miles from Indonesia’s baselines, giving rights to explore, exploit, conserve, and manage natural resources.</p>
+                                <a href="https://www.ajne.org/sites/default/files/document/laws/6663/ins6757.pdf?utm_source=chatgpt.com!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-hands-holding-child fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Continental Shelf</h3>
+                                <p class="mb-2">Indonesia has sovereign rights over the continental shelf, which may extend beyond 200 nautical miles where geological evidence supports it.</p>
+                                <a href="https://legacy.iho.int/mtg_docs/com_wg/ABLOS/ABLOS_Conf5/Papers/Session6-Paper2-Patmasari.pdf?utm_source=chatgpt.com!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-bowl-food fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Archipelagic State Principles</h3>
+                                <p class="mb-2">The Djuanda Declaration (1957) established Indonesia as an archipelagic state, later recognized in UNCLOS 1982 and ratified through Law No. 17/1985.</p>
+                                <a href="https://r.search.yahoo.com/_ylt=AwrKAk5alM5oTzICuw_LQwx.;_ylu=Y29sbwNzZzMEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1759578459/RO=10/RU=https%3a%2f%2fwww.atlantis-press.com%2farticle%2f125987317.pdf/RK=2/RS=8l0igv0j_fxInyefDWzTH1XcJME-!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-school-flag fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Maritime Boundaries with Neighboring States</h3>
+                                <p class="mb-2">We’re creating programs that address urgent needs while fostering
+                                    long-term solutions for sustainable change.</p>
+                                <a href="https://www.un.org/depts/los/LEGISLATIONANDTREATIES/STATEFILES/IDN.htm?utm_source=chatgpt.com!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-home fa-2x text-secondary"></i>
+                                </div>
+                                <h3>National Security and Resource Protection</h3>
+                                <p class="mb-2">Clear maritime boundaries help Indonesia protect fisheries, marine resources, and national security.</p>
+                                <a href="https://leap.unep.org/en/countries/id/national-legislation/law-no-452009-amending-law-no-312004-fisheries!">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+  <!-- Features Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <!-- Kiri: Angka-angka -->
+            <div class="col-lg-6">
+                <div class="rounded overflow-hidden">
+                    <div class="row g-0">
+
+                        <!-- Box 1 -->
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="text-center bg-primary py-5 px-4 h-100">
+                                <i class="fa fa-users fa-3x text-secondary mb-3"></i>
+                                <h1 class="display-5 mb-0">
+                                    <span data-toggle="counter-up">200</span>+
+                                </h1>
+                                <span class="text-dark">
+                                    Maritime agreements and negotiations shaping our sovereignty.
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Box 2 -->
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="text-center bg-secondary py-5 px-4 h-100">
+                                <i class="fa fa-award fa-3x text-primary mb-3"></i>
+                                <h1 class="display-5 text-white mb-0">
+                                    <span data-toggle="counter-up">10</span>
+                                </h1>
+                                <span class="text-white">
+                                    Neighboring countries that share maritime boundaries with Indonesia.
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Box 3 -->
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="text-center bg-secondary py-5 px-4 h-100">
+                                <i class="fa fa-list-check fa-3x text-primary mb-3"></i>
+                                <h1 class="display-6 text-white mb-0">
+                                    <span data-toggle="counter-up">6400000</span> km²
+                                </h1>
+                                <span class="text-white">
+                                    Total sea area under Indonesia’s rights and responsibilities.
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Box 4 -->
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="text-center bg-primary py-5 px-4 h-100">
+                                <i class="fa fa-comments fa-3x text-secondary mb-3"></i>
+                                <h1 class="display-5 mb-0">
+                                    <span data-toggle="counter-up">17000</span>+
+                                </h1>
+                                <span class="text-dark">
+                                    Islands that make Indonesia the world’s largest archipelagic state.
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Teks -->
+            <div class="col-lg-6">
+                <p class="section-title bg-white text-start text-primary pe-3">Why it Matters?</p>
+                <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">
+                    Why Learn Maritime Boundaries?!
+                </h1>
+                <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">
+                    Maritime boundaries are the backbone of Indonesia’s sovereignty. 
+                    They secure our resources, define our territory, and protect our people. 
+                    By understanding them, we support national unity, strengthen diplomacy 
+                    with our neighbors, and ensure the future of our oceans.
+                </p>
+                <p class="text-dark wow fadeIn" data-wow-delay="0.4s">
+                    <i class="fa fa-check text-primary me-2"></i>Safeguard national sovereignty
+                </p>
+                <p class="text-dark wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-check text-primary me-2"></i>Protect marine resources
+                </p>
+                <p class="text-dark wow fadeIn" data-wow-delay="0.6s">
+                    <i class="fa fa-check text-primary me-2"></i>Strengthen peace and cooperation
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+   <!-- Donation Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+      <p class="section-title bg-white text-center text-primary px-3">Study Case</p>
+      <h1 class="display-6 mb-4">Case Studies on Indonesia’s Maritime Boundaries</h1>
+    </div>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Box 1 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgAustralia">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Australia_Indonesia-01.png"
+                     alt="Indonesia–Australia"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://www.tandfonline.com/doi/abs/10.1080/13629379708407592?utm_source=chatgpt.com!" class="h3 d-inline-block">Indonesia–Australia</a>
+            <p>All maritime boundaries settled through treaties (1971, 1972, 1997, 1998). Strong cooperation in fisheries and maritime security.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgMalaysia">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2023/07/Indonesia-Malaysia-1.png"
+                     alt="Indonesia–Malaysia"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://ejournal.undiksha.ac.id/index.php/jatayu/article/view/28724?utm_source=chatgpt.com!" class="h3 d-inline-block">Indonesia–Malaysia</a>
+            <p>Territorial sea mostly agreed, but Ambalat Block remains disputed. Ongoing negotiations with potential ICJ involvement.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgTimor">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Australia_Timor-Leste-01.png"
+                     alt="Indonesia–Timor Leste"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://journal.unnes.ac.id/sju/lslr/article/view/66126?utm_source=chatgpt.com!" class="h3 d-inline-block">Indonesia–Timor Leste</a>
+            <p>Land boundary mostly settled. Maritime delimitation in progress (latest talks 2019–2022).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgPhilippines">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2024/01/Indonesia-Philippines.png"
+                     alt="Indonesia–Philippines"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://archive.aessweb.com/index.php/5007/article/view/3239?utm_source=chatgpt.com!" class="h3 d-inline-block">Indonesia–Philippines</a>
+            <p>EEZ boundary agreement signed in 2014. Cooperation on fisheries and patrols, though minor technical adjustments remain.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgPapua">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Indonesia_Papua-New-Guinea-01.png"
+                     alt="Indonesia–Papua New Guinea"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://www.informea.org/en/content/legislation/agreement-between-government-republic-indonesia-and-government-papua-new-guinea?utm_source=chatgpt.com!" class="h3 d-inline-block">Indonesia–Papua New Guinea</a>
+            <p>Land boundary defined, maritime delimitation progressing. Joint border committee active, but EEZ boundary still under review.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 6 -->
+      <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+        <div class="donation-item d-flex h-100 p-4">
+          <div class="donation-detail">
+            <div class="position-relative mb-4 text-center">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#imgPapua">
+                <img class="img-fluid w-100"
+                     src="https://sovereignlimits.com/wp-content/uploads/sites/2/2024/08/Indonesia-Vietnam-749x1024.png"
+                     alt="Indonesia–Vietnam"
+                     style="max-height:200px; object-fit:contain; cursor:pointer;">
+              </a>
+            </div>
+            <a href="https://maritim.ft.ugm.ac.id/2024/01/16/235/?utm_source=chatgpt.com" class="h3 d-inline-block">Indonesia–Vietnam</a>
+            <p>Indonesia and Vietnam reached an agreement on their EEZ boundary in the North Natuna Sea, reflecting commitment to UNCLOS 1982 and regional stability.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Donation End -->
+
+<!-- Modals -->
+<div class="modal fade" id="imgAustralia" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Australia_Indonesia-01.png" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="imgMalaysia" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="https://sovereignlimits.com/wp-content/uploads/sites/2/2023/07/Indonesia-Malaysia-1.png" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="imgTimor" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Australia_Timor-Leste-01.png" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="imgPhilippines" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="https://sovereignlimits.com/wp-content/uploads/sites/2/2024/01/Indonesia-Philippines.png" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="imgPapua" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="https://sovereignlimits.com/wp-content/uploads/sites/2/2020/02/Indonesia_Papua-New-Guinea-01.png" class="img-fluid rounded">
+  </div>
+</div>
+
+
+<!-- Banner Start -->
+<div class="container-fluid banner py-5">
+    <div class="container">
+        <div class="banner-inner bg-light p-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 py-5 text-center">
+                    <h1 class="display-6 wow fadeIn" data-wow-delay="0.3s">
+                        Linking Maritime Boundaries with the Sustainable Development Goals (SDGs)
+                    </h1>
+                    <p class="fs-5 mb-4 wow fadeIn" data-wow-delay="0.5s">
+                        Through education, research, and collaboration, we connect the study of maritime boundaries 
+                        with the United Nations Sustainable Development Goals. This ensures that ocean governance, 
+                        resource management, and peaceful diplomacy contribute to a sustainable future for all.
+                    </p>
+
+                    <!-- SDG Icons and Descriptions -->
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-4 wow fadeIn" data-wow-delay="0.6s">
+                            <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg" 
+                                 alt="SDG 14 Life Below Water" class="img-fluid mb-3" style="max-width:120px;">
+                            <h5>SDG 14: Life Below Water</h5>
+                            <p class="small">Protecting marine biodiversity and ensuring sustainable use of ocean resources.</p>
+                        </div>
+                        <div class="col-md-4 wow fadeIn" data-wow-delay="0.7s">
+                            <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-16.jpg" 
+                                 alt="SDG 16 Peace Justice Strong Institutions" class="img-fluid mb-3" style="max-width:120px;">
+                            <h5>SDG 16: Peace, Justice & Strong Institutions</h5>
+                            <p class="small">Promoting peaceful maritime dispute resolution and strong governance.</p>
+                        </div>
+                        <div class="col-md-4 wow fadeIn" data-wow-delay="0.8s">
+                            <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-17.jpg" 
+                                 alt="SDG 17 Partnership for the Goals" class="img-fluid mb-3" style="max-width:120px;">
+                            <h5>SDG 17: Partnerships for the Goals</h5>
+                            <p class="small">Strengthening international cooperation in managing shared seas.</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="d-flex justify-content-center wow fadeIn" data-wow-delay="0.9s">
+                        <a class="btn btn-primary py-3 px-4 me-3" href="https://sdgs.un.org/goals" target="_blank">Explore SDGs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
+ <!-- Institutions Section Start -->
+<style>
+  .institution-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .institution-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .institution-card h6 a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  .institution-card h6 a:hover {
+    color: #007bff;
+  }
+</style>
+
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Institutions Related to Indonesia’s Maritime Boundaries</h2>
+    <p class="text-muted">Key national and international institutions that play important roles in managing and protecting Indonesia’s maritime zones.</p>
+  </div>
+
+  <!-- National Institutions -->
+  <h4 class="text-center mb-4">🇮🇩 National Institutions</h4>
+  <div class="row justify-content-center text-center">
+    <div class="col-md-2 col-6 mb-4 institution-card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.ea-hsjDFhnhDs3_UiDewQwHaHU?pid=Api&P=0&h=180" class="img-fluid mb-2" alt="Pushidrosal Logo">
+      <h6><a href="https://www.tnial.mil.id/" target="_blank">Pushidrosal TNI AL</a></h6>
+      <p class="small">Hydro-Oceanographic Center, provider of marine charts & baseline data.</p>
+    </div>
+    <div class="col-md-2 col-6 mb-4 institution-card">
+      <img src="https://yt3.ggpht.com/a/AGF-l79n_ukDciSwQv98YRu-OrenP9hmjdye-HxGeQ=s900-mo-c-c0xffffffff-rj-k-no" class="img-fluid mb-2" alt="BIG Logo">
+      <h6><a href="https://www.big.go.id/" target="_blank">BIG</a></h6>
+      <p class="small">Geospatial Information Agency, responsible for national geospatial datasets.</p>
+    </div>
+    <div class="col-md-2 col-6 mb-4 institution-card">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhe-kvEqzBKj_ldhTx8Q8DnEU8YAvGSpDpcwlHQvZCtNKJS5RBuJ6Dp3ELk6i_YFdxFoNa9cihAGNHasYSOGMq7kh2W5la7GH2Fb4TSRN0AOjZeeNnI4_uW2XqvsQvHN-mpm7YDk_FV5-O8_bSJOa8bwVGQgu5QYRy9dN3TlbhR-mQaXfALHcZnIw/s320/Logo%20Kementerian%20Luar%20Negeri%20Indonesia%20(Kemenlu)%20(PNG-2500px)%20-%20koleksilogo.png" class="img-fluid mb-2" alt="Kemlu Logo">
+      <h6><a href="https://kemlu.go.id/" target="_blank">Ministry of Foreign Affairs</a></h6>
+      <p class="small">Leads maritime boundary negotiations with neighboring states.</p>
+    </div>
+    <div class="col-md-2 col-6 mb-4 institution-card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.3b7lOxEAvWxrRTX6geIifQHaHa?pid=Api&P=0&h=180" class="img-fluid mb-2" alt="KKP Logo">
+      <h6><a href="https://kkp.go.id/" target="_blank">Ministry of Marine Affairs & Fisheries</a></h6>
+      <p class="small">Manages fisheries and marine resources protection.</p>
+    </div>
+    <div class="col-md-2 col-6 mb-4 institution-card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.7x9OR9IVqx4dS0YRv-ljwwHaHa?pid=Api&P=0&h=180" class="img-fluid mb-2" alt="Kemhan Logo">
+      <h6><a href="https://www.kemhan.go.id/" target="_blank">Ministry of Defense</a></h6>
+      <p class="small">Safeguards national security and sovereignty at sea.</p>
+    </div>
+  </div>
+
+<!-- International Institutions -->
+<h4 class="text-center my-4"> International Institutions</h4>
+<div class="row justify-content-center text-center">
+
+  <style>
+    /* ukuran default logo */
+    .institution-card img {
+      width: 120px !important;
+      height: 80px !important;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* khusus UN, ITLOS, ASEAN biar lebih kecil */
+    .institution-card img.smaller {
+      width: 90px !important;
+      height: 60px !important;
+    }
+  </style>
+
+  <!-- UNCLOS -->
+  <div class="col-md-2 col-6 mb-4 institution-card">
+    <img src="https://pngimg.com/uploads/un/un_PNG5.png" class="img-fluid mb-2 smaller" alt="UNCLOS Logo">
+    <h6><a href="https://www.un.org/depts/los/" target="_blank">United Nations (UNCLOS)</a></h6>
+    <p class="small">Framework for maritime law and boundaries.</p>
+  </div>
+
+  <!-- ITLOS -->
+  <div class="col-md-2 col-6 mb-4 institution-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/UNCLOS_logo.svg/336px-UNCLOS_logo.svg.png" class="img-fluid mb-2 smaller" alt="ITLOS Logo">
+    <h6><a href="https://www.itlos.org/" target="_blank">ITLOS</a></h6>
+    <p class="small">Judicial body that settles disputes regarding the law of the sea.</p>
+  </div>
+
+  <!-- IHO -->
+  <div class="col-md-2 col-6 mb-4 institution-card">
+    <img src="https://www.hydro-international.com/cache/9/d/2/a/8/9d2a8e17cafa674c6853a1d921bb1788c5832c29.png" class="img-fluid mb-2" alt="IHO Logo">
+    <h6><a href="https://iho.int/" target="_blank">IHO</a></h6>
+    <p class="small">Coordinates hydrographic standards for safe navigation.</p>
+  </div>
+
+  <!-- ASEAN -->
+  <div class="col-md-2 col-6 mb-4 institution-card">
+    <img src="https://images.squarespace-cdn.com/content/v1/5cecd9c1f824ce00010c16c0/1576224795044-5BVDTDF88IBWCCQPXB7D/logo-asean.png" class="img-fluid mb-2 smaller" alt="ASEAN Logo">
+    <h6><a href="https://asean.org/" target="_blank">ASEAN</a></h6>
+    <p class="small">Regional cooperation on maritime security and boundary issues.</p>
+  </div>
+
+  <!-- IMO -->
+  <div class="col-md-2 col-6 mb-4 institution-card">
+    <img src="https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/field/image/imov1-01.jpg?itok=twTBiYgy" class="img-fluid mb-2" alt="IMO Logo">
+    <h6><a href="https://www.imo.org/" target="_blank">IMO</a></h6>
+    <p class="small">Regulates international shipping safety and environmental standards.</p>
+  </div>
+</div>
+<!-- International Institutions End -->
+
+
+
+
+<!-- Institutions Section End -->
+
+
+
+    
+
+
+ <!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="section-title bg-white text-center text-primary px-3">Our Team</p>
+            <h1 class="display-6 mb-4">Meet Our Team Members</h1>
+        </div>
+        <div class="row g-4">
+
+            <!-- Member 1 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="team-item d-flex h-100 p-4">
+                    <div class="team-detail pe-4">
+                        <img class="img-fluid mb-4" src="https://tsp.sv.ugm.ac.id/wp-content/uploads/sites/1178/2021/07/M._Iqbal_Taftazani-bgPutih-300x300.jpg" alt="">
+                        <h3>Muhammad Iqbal Taftazani, S.T., M.Eng</h3>
+                        <span>Dosen Teknologi Survei & Pemetaan Dasar UGM</span>
+                    </div>
+                    <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                        <a class="btn btn-square btn-primary my-2" href="https://www.instagram.com/iqbaltaf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary my-2" href="https://www.linkedin.com/in/muhammad-iqbal-taftazani-45b53a231/!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.2s">
+                <div class="team-item d-flex h-100 p-4">
+                    <div class="team-detail pe-4">
+                        <img class="img-fluid mb-4" src="https://tse2.mm.bing.net/th/id/OIP.Y7oxoUXsW81z-zN6MV_4mQAAAA?pid=Api&P=0&h=180" alt="">
+                        <h3>Ir. Waljiyanto, M.Sc</h3>
+                        <span>Dosen Teknologi Survei & Pemetaan Dasar UGM</span>
+                    </div>
+                    <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                        <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="team-item d-flex h-100 p-4">
+                    <div class="team-detail pe-4">
+                        <img class="img-fluid mb-4" src="https://media.licdn.com/dms/image/v2/D5603AQHLRTNIt4O2qA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727083350410?e=1761177600&v=beta&t=QVvhm4o85iZBm4pBRD51bfQMgjb9T1ZbplJsKA9USZM" alt="">
+                        <h3>Putri Shafaa Salsabila</h3>
+                        <span>Mahasiswa Teknologi Survei & Pemetaan Dasar UGM</span>
+                    </div>
+                    <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                        <a class="btn btn-square btn-primary my-2" href="https://www.instagram.com/caca.salsabila_/?hl=en!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary my-2" href="https://www.linkedin.com/in/putri-shafaa-salsabila-2aa689294/!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.4s">
+                <div class="team-item d-flex h-100 p-4">
+                    <div class="team-detail pe-4">
+                        <img class="img-fluid mb-4" src="https://media.licdn.com/dms/image/v2/D4E03AQHlWRMALPzyfQ/profile-displayphoto-shrink_200_200/B4EZVC3r7rGgAg-/0/1740583653089?e=1761177600&v=beta&t=ZC3p6hRLMNU0E6eFeTZftVCYl3qWpgiJaF7ZBlCniBc" alt="">
+                        <h3>Wahyu Eka Saputra</h3>
+                        <span>Mahasiswa Teknologi Survei & Pemetaan Dasar UGM</span>
+                    </div>
+                    <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                        <a class="btn btn-square btn-primary my-2" href="https://www.instagram.com/whyueka_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary my-2" href="https://www.linkedin.com/in/wahyu-eka-saputra1210/!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-3">
+                <div class="col-lg-12">
+                    <h4 class="text-light mb-4 text-center">Our Office</h4>
+
+                    <!-- Info contact dibuat flex agar menyamping -->
+                    <div class="d-flex justify-content-center flex-wrap office-info">
+                        <p class="mb-2 me-4">
+                            <i class="fa fa-map-marker-alt me-2"></i>
+                            Gedung Perpustakaan SV UGM, Sekip Unit 5, Blimbing Sari, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                        </p>
+                        <p class="mb-2 me-4">
+                            <i class="fa fa-phone-alt me-2"></i>(0274) 551255
+                        </p>
+                        <p class="mb-2">
+                            <i class="fa fa-envelope me-2"></i>tsp.sv@ugm.ac.id
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="https://x.com/tspugm_official"><i class="fab fa-x-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="www.youtube.com/@tspdsvugm_official"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/tspd-sv-ugm-109660336/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="instagram.com/tspugm.official"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        &copy;
+                        <a class="fw-semi-bold" href="https://tsp.sv.ugm.ac.id//">D4 Teknologi Survei dan Pemetaan Dasar, Sekolah Vokasi, Universitas Gadjah Mada</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
